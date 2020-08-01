@@ -13,7 +13,7 @@ app.use(express.json())
 
 const uri = process.env.ATLAST_URI;
 
-mongoose.connect('mongodb+srv://Samul:killinginthenameof@cluster0.h638k.mongodb.net/trackerapp?retryWrites=true&w=majority',{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology:true})
+mongoose.connect(uri,{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology:true})
 const connection = mongoose.connection;
 
 connection.once('open',()=>{
